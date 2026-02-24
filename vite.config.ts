@@ -13,8 +13,4 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false
   }
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> fee14e5 (Update vite config)
