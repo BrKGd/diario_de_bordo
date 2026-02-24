@@ -2,7 +2,7 @@
   "name": "diario_de_bordo",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://brkgd.github.io/diario_de_bordo",
+  "homepage": "https://brkgd.github.io/daily-report-v2",
   "type": "module",
   "scripts": {
     "dev": "vite",
