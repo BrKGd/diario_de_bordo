@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/daily-report-v2/'
+  base: '/diario_de_bordo/'
 })
