@@ -5,7 +5,8 @@
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vite/client"],
+    /* Adicionado 'vite-plugin-pwa/client' para reconhecer o registerSW */
+    "types": ["vite/client", "vite-plugin-pwa/client"], 
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -20,9 +21,9 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    /*"erasableSyntaxOnly": true,*/
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  /* Garantimos que ele procure por todos os arquivos dentro de src, incluindo o .d.ts */
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
 }
