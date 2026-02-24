@@ -630,6 +630,92 @@ textarea:focus {
   animation: fadeIn 0.4s ease-out;
 }
 
+/* =====================================================
+   RESPONSIVIDADE (MOBILE)
+===================================================== */
+@media (max-width: 768px) {
+  /* Ajuste do Layout Principal */
+  .app-layout {
+    flex-direction: column; /* Empilha sidebar e conteúdo */
+  }
+
+  .sidebar {
+    width: 100%; /* Ocupa a largura toda */
+    height: auto; /* Altura flui com o conteúdo */
+    position: relative; /* Remove o travamento fixo */
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content {
+    margin-left: 0; /* Remove o espaço da barra lateral */
+    padding: 20px;
+    width: 100%;
+  }
+
+  /* Navegação em Grade no Mobile */
+  .nav-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Links em duas colunas */
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 10px;
+    text-align: center;
+    background: var(--surface-light);
+  }
+
+  .nav-menu a:hover {
+    padding-left: 15px; /* Reduz o efeito de slide no mobile */
+  }
+
+  /* Formulário: Forçar uma coluna só */
+  .form-grid {
+    grid-template-columns: 1fr; /* Ignora as 6 colunas originais */
+  }
+
+  .time-input, 
+  .half-width, 
+  .full-width, 
+  .responsible-input, 
+  .container-btn {
+    grid-column: span 1; /* Todos ocupam a linha toda */
+  }
+
+  .btn-deploy {
+    width: 100%; /* Botão largo para facilitar o toque */
+  }
+
+  /* Cards e Dashboards */
+  .stats-grid, 
+  .action-grid {
+    grid-template-columns: 1fr; /* Um card por linha */
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .big-number {
+    font-size: 2.5rem; /* Diminui números gigantes */
+  }
+
+  /* Ajuste de Itens da Lista */
+  .mini-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mini-duration {
+    align-self: flex-end; /* Badge de duração vai para o canto */
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
